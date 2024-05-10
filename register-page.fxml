@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="477.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.RegisterController">
+   <stylesheets>
+      <URL value="@style-register.css" />
+   </stylesheets>
+   <children>
+      <Button fx:id="registerButton" layoutX="105.0" layoutY="190.0" mnemonicParsing="false" onAction="#register" text="Inregistrare" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="190.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="backButton" layoutX="30.0" layoutY="190.0" mnemonicParsing="false" onAction="#back" text="Inapoi" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="190.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <PasswordField fx:id="passwordField" layoutX="30.0" layoutY="129.0" prefHeight="40.0" prefWidth="160.0" promptText="Password" styleClass="modern-input" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="129.0" />
+      <TextField fx:id="usernameField" layoutX="30.0" layoutY="78.0" prefHeight="40.0" prefWidth="160.0" promptText="Username" styleClass="modern-input" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="78.0" />
+      <Label fx:id="statusMessageRegister" layoutX="30.0" layoutY="13.0" prefHeight="26.0" prefWidth="525.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="36.0" />
+      <ProgressBar fx:id="progressBar" layoutX="30.0" layoutY="53.0" prefHeight="18.0" prefWidth="150.0" progress="0.0" visible="false" />
+      <Label fx:id="passwordRequirementsLabel" layoutX="317.0" layoutY="71.0" prefHeight="126.0" prefWidth="187.0" />
+   </children>
+</AnchorPane>

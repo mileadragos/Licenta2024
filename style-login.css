@@ -1,0 +1,42 @@
+#statusMessageLogin {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-text-fill: black;
+}
+
+#signInButton {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-text-fill: white;
+    -fx-background-color: #4CAF50;
+    -fx-border-radius: 5px;
+    -fx-padding: 7px 12px;
+}
+
+#signInButton:hover {
+    -fx-background-color: #3e8e41;
+}
+
+#backButton {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-text-fill: white;
+    -fx-background-color: lightcoral;
+    -fx-border-radius: 5px;
+    -fx-padding: 7px 12px;
+}
+
+#backButton:hover {
+    -fx-background-color: #e04040;
+}
+
+.modern-input {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-background-color: #f5f5f5; /* Light background for a modern feel */
+    -fx-border-color: #d9d9d9;     /* Subtle gray border */
+    -fx-border-radius: 5px;       /* Slightly rounded corners */
+    -fx-padding: 10px;            /* Padding within the input field */
+    -fx-text-fill: #333333;       /* Dark text color */
+}
+
+.modern-input:focused {
+    -fx-background-color: #fff;   /* White background when focused */
+    -fx-border-color: #4CAF50;    /* Highlight with your accent color (or any preferred color) */
+}

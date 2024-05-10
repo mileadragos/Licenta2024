@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="665.0" style="-fx-background-color: D3D5D4;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.WelcomeController">
+   <stylesheets>
+      <URL value="@style-welcome.css" />
+   </stylesheets>
+   <children>
+      <Label layoutX="170.0" layoutY="27.0" prefHeight="45.0" prefWidth="272.0" text="Bun venit in Aplicatia Now CRM." textFill="#101010" AnchorPane.bottomAnchor="431.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="223.0" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="logInButton" layoutX="282.0" layoutY="272.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="104.0" text="Conectare" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="282.0" AnchorPane.rightAnchor="281.0" AnchorPane.topAnchor="272.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets bottom="277.0" left="376.0" right="187.0" top="181.0" />
+         </padding></Button>
+      <Button fx:id="registerWelcomeButton" layoutX="56.0" layoutY="272.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="104.0" text="Inregistrare" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="507.0" AnchorPane.topAnchor="272.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="170.0" layoutY="102.0" prefHeight="49.0" prefWidth="325.0" text="Mai jos pot regasi optiunile de inregistrare sau conectare." AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="102.0" />
+      <ImageView fitHeight="91.0" fitWidth="102.0" layoutX="56.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../CRM-Icon.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

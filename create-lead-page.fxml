@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.CreateLeadPageController">
+   <children>
+      <Label layoutX="43.0" layoutY="13.0" prefHeight="18.0" prefWidth="112.0" text="Nume Lead:" AnchorPane.leftAnchor="43.0" />
+      <TextField fx:id="leadNameField" layoutX="184.0" layoutY="9.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextField fx:id="leadPhoneField" layoutX="183.0" layoutY="141.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="leadEmailField" layoutX="183.0" layoutY="177.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="37.0" layoutY="145.0" prefHeight="18.0" prefWidth="123.0" text="Numar de telefon:" AnchorPane.leftAnchor="37.0" />
+      <Label layoutX="37.0" layoutY="181.0" prefHeight="18.0" prefWidth="98.0" text="Email:" AnchorPane.leftAnchor="37.0" />
+      <Button layoutX="40.0" layoutY="349.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Anulează" />
+      <Button layoutX="333.0" layoutY="349.0" mnemonicParsing="false" onAction="#createLead" text="Crează" />
+      <Label layoutX="40.0" layoutY="114.0" prefHeight="18.0" prefWidth="55.0" text="Functie:" AnchorPane.leftAnchor="40.0" />
+      <TextField fx:id="leadJobField" layoutX="183.0" layoutY="110.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="43.0" layoutY="49.0" prefHeight="18.0" prefWidth="123.0" text="Companie:" />
+      <ComboBox fx:id="leadCompanyComboBox" layoutX="184.0" layoutY="45.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="43.0" layoutY="83.0" prefHeight="18.0" prefWidth="123.0" text="Contact:" />
+      <ComboBox fx:id="leadContactComboBox" layoutX="184.0" layoutY="79.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="37.0" layoutY="218.0" prefHeight="18.0" prefWidth="98.0" text="Venit Estimat:" />
+      <TextField fx:id="leadEstRevField" layoutX="183.0" layoutY="214.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="37.0" layoutY="250.0" prefHeight="18.0" prefWidth="98.0" text="Status:" />
+      <ComboBox fx:id="leadStatusComboBox" layoutX="183.0" layoutY="246.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label fx:id="statusUpdate" layoutX="353.0" layoutY="377.0" prefHeight="18.0" prefWidth="198.0" />
+      <ComboBox fx:id="leadAssigneeComboBox" layoutX="183.0" layoutY="282.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="37.0" layoutY="286.0" prefHeight="18.0" prefWidth="98.0" text="Responsabil:" />
+      <CheckBox fx:id="leadActiveCheckBox" disable="true" layoutX="466.0" layoutY="13.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="16.0" />
+      <Label layoutX="390.0" layoutY="13.0" prefHeight="18.0" prefWidth="50.0" text="Activ:" />
+      <Label layoutX="390.0" layoutY="49.0" prefHeight="18.0" prefWidth="76.0" text="Data Creare:" />
+      <DatePicker fx:id="leadCreatedDate" disable="true" layoutX="466.0" layoutY="45.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="391.0" layoutY="83.0" text="Creat de:" />
+      <ComboBox fx:id="leadCreatedByComboBox" layoutX="466.0" layoutY="79.0" prefHeight="26.0" prefWidth="123.0" />
+   </children>
+</AnchorPane>

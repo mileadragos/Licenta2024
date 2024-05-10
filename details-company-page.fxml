@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.DetailsCompanyPageController">
+   <children>
+      <Label layoutX="30.0" layoutY="13.0" prefHeight="18.0" prefWidth="112.0" text="Nume companie:" />
+      <TextField fx:id="companyNameField" layoutX="171.0" layoutY="9.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextField fx:id="companyAddressField" layoutX="170.0" layoutY="49.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="companyPhoneField" layoutX="170.0" layoutY="87.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="companyEmailField" layoutX="170.0" layoutY="120.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="27.0" layoutY="53.0" text="Adresa Companie:" />
+      <Label layoutX="24.0" layoutY="91.0" prefHeight="18.0" prefWidth="123.0" text="Numar de telefon:" />
+      <Label layoutX="26.0" layoutY="124.0" prefHeight="18.0" prefWidth="98.0" text="Email:" />
+      <Button fx:id="backButton" layoutX="27.0" layoutY="329.0" mnemonicParsing="false" onAction="#back" text="Inapoi" />
+      <Button layoutX="415.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateCompany" text="Actualizeaza" />
+      <Button layoutX="515.0" layoutY="329.0" mnemonicParsing="false" onAction="#archiveCompany" text="Arhiveaza" />
+      <Button fx:id="createCompanyButton" layoutX="320.0" layoutY="329.0" mnemonicParsing="false" onAction="#createCompany" text="Creaza" />
+      <ComboBox fx:id="companyAssigneeComboBox" layoutX="170.0" layoutY="156.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="26.0" layoutY="160.0" prefHeight="18.0" prefWidth="98.0" text="Responsabil:" />
+      <CheckBox fx:id="companyActiveCheckBox" disable="true" layoutX="466.0" layoutY="13.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="16.0" />
+      <Label layoutX="390.0" layoutY="13.0" prefHeight="18.0" prefWidth="50.0" text="Activ:" />
+      <Label layoutX="390.0" layoutY="53.0" prefHeight="18.0" prefWidth="76.0" text="Data Creare:" />
+      <DatePicker fx:id="companyCreatedDate" disable="true" layoutX="466.0" layoutY="49.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="391.0" layoutY="91.0" text="Creat de:" />
+      <ComboBox fx:id="companyCreatedByComboBox" layoutX="466.0" layoutY="87.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label fx:id="statusUpdate" layoutX="362.0" layoutY="367.0" prefHeight="18.0" prefWidth="207.0" />
+   </children>
+</AnchorPane>

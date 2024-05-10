@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="828.0" prefWidth="1457.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.MainPageController">
+   <children>
+      <Label fx:id="helloUser" layoutX="50.0" layoutY="30.0" prefHeight="18.0" prefWidth="807.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="25.0" />
+      <VBox fx:id="mainVbox" layoutX="31.0" layoutY="53.0" prefHeight="683.0" prefWidth="78.0" style="-fx-background-color: #EDF9FF;" AnchorPane.leftAnchor="7.0">
+         <children>
+            <ImageView fx:id="taskImage" fitHeight="38.0" fitWidth="76.0" onMouseClicked="#handleShowTasks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../TASKS-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="115.0" prefHeight="18.0" prefWidth="115.0" text="Task-uri">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsTasks" focusTraversable="false" layoutX="10.0" layoutY="71.0" prefHeight="24.0" prefWidth="113.0" text="Mai multe.." />
+            <Separator layoutX="10.0" layoutY="170.0" prefHeight="9.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="companyImage" fitHeight="38.0" fitWidth="50.0" onMouseClicked="#handleShowCompanies" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../../../COMPANY-Icon.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="18.0" prefWidth="115.0" text="Companii">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsCompanies" focusTraversable="false" text="Mai multe.." />
+            <Separator prefHeight="9.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="contactImage" fitHeight="45.0" fitWidth="86.0" onMouseClicked="#handleShowContacts" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../USERS-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label text="Contacte">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsContacts" focusTraversable="false" layoutX="10.0" layoutY="55.0" text="Mai multe.." />
+            <Separator prefHeight="11.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="leadImage" accessibleHelp="Leads" fitHeight="46.0" fitWidth="61.0" onMouseClicked="#handleShowLeads" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../LEADS-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label prefHeight="18.0" prefWidth="68.0" text="Leads">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsLeads" focusTraversable="false" prefHeight="24.0" prefWidth="113.0" text="Mai multe.." />
+            <Separator prefHeight="12.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="opportunityImage" fitHeight="46.0" fitWidth="86.0" onMouseClicked="#handleShowOpportunities" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../OPPORTUNITIES-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label prefHeight="18.0" prefWidth="114.0" text="Oportunități">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsOpportunities" focusTraversable="false" layoutX="10.0" layoutY="212.0" prefHeight="24.0" prefWidth="113.0" text="Mai multe.." />
+            <Separator layoutX="10.0" layoutY="236.0" prefHeight="12.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="saleImage" fitHeight="46.0" fitWidth="79.0" onMouseClicked="#handleShowSales" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../SALES-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="248.0" prefHeight="18.0" prefWidth="114.0" text="Vânzări">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsSales" focusTraversable="false" layoutX="10.0" layoutY="212.0" prefHeight="24.0" prefWidth="113.0" text="Mai multe.." />
+            <Separator layoutX="10.0" layoutY="317.0" prefHeight="12.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="productImage" fitHeight="46.0" fitWidth="74.0" onMouseClicked="#handleShowProducts" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../PRODUCTS-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="329.0" prefHeight="18.0" prefWidth="114.0" text="Servicii">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="moreDetailsProducts" focusTraversable="false" layoutX="10.0" layoutY="374.0" prefHeight="24.0" prefWidth="113.0" text="Mai multe.." />
+            <Separator layoutX="10.0" layoutY="398.0" prefHeight="12.0" prefWidth="114.0" style="-fx-background-color: #9FD7F5;" />
+            <ImageView fx:id="reportImage" fitHeight="121.0" fitWidth="50.0" onMouseClicked="#showReports" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../REPORTS-Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="588.0" prefHeight="18.0" prefWidth="114.0" text="Rapoarte">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TableView fx:id="contactDetailsTable" layoutX="143.0" layoutY="69.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <columns>
+            <TableColumn fx:id="numeContact" prefWidth="87.20001220703125" text="Nume">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nume_contact" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="prenumeContact" prefWidth="100.79998779296875" text="Prenume">
+               <cellValueFactory>
+                  <PropertyValueFactory property="prenume_contact" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="functieContact" prefWidth="53.0" text="Functie">
+               <cellValueFactory>
+                  <PropertyValueFactory property="functie" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="emailContact" prefWidth="150.99998474121094" text="Email">
+               <cellValueFactory>
+                  <PropertyValueFactory property="email" />
+               </cellValueFactory>
+            </TableColumn>
+             <TableColumn fx:id="telefonContact" prefWidth="150.99998474121094" text="Numar de telefon">
+                 <cellValueFactory>
+                     <PropertyValueFactory property="telefon" />
+                 </cellValueFactory>
+             </TableColumn>
+             <TableColumn fx:id="companieContact" prefWidth="150.99998474121094" text="Companie">
+                 <cellValueFactory>
+                     <PropertyValueFactory property="companieNume" />
+                 </cellValueFactory>
+             </TableColumn>
+
+            <TableColumn fx:id="responsabil" prefWidth="103.5999755859375" text="Responsabil">
+               <cellValueFactory>
+                  <PropertyValueFactory property="responsabilNume" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="creat_de" prefWidth="103.5999755859375" text="Creat De">
+               <cellValueFactory>
+                  <PropertyValueFactory property="creatDeNume" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="data_creare" prefWidth="103.5999755859375" text="Data Creare">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_creare" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="activ" prefWidth="103.5999755859375" text="Activ">
+               <cellValueFactory>
+                  <PropertyValueFactory property="activ" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Separator layoutX="126.0" layoutY="59.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="10.0" AnchorPane.bottomAnchor="-0.39999999999997726" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="59.0" />
+      <Separator layoutX="30.0" layoutY="43.0" prefHeight="10.0" prefWidth="547.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" />
+      <TableView fx:id="companyDetailsTable" layoutX="143.0" layoutY="59.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+        <columns>
+          <TableColumn fx:id="numeCompanie" prefWidth="122.00001525878906" text="Nume Companie">
+            <cellValueFactory>
+                <PropertyValueFactory property="nume_companie" />
+            </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="adresaCompanie" prefWidth="150.4000244140625" text="Adresa Companie">
+              <cellValueFactory>
+                  <PropertyValueFactory property="adresa_companie" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="telefon" prefWidth="109.20001220703125" text="Numar de telefon">
+                <cellValueFactory>
+                    <PropertyValueFactory property="telefon" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="email" prefWidth="103.5999755859375" text="Email">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+
+           <TableColumn fx:id="responsabilCompanie" prefWidth="103.5999755859375" text="Responsabil">
+              <cellValueFactory>
+                 <PropertyValueFactory property="responsabilNume" />
+              </cellValueFactory>
+           </TableColumn>
+
+           <TableColumn fx:id="creat_deCompanie" prefWidth="103.5999755859375" text="Creat De">
+              <cellValueFactory>
+                 <PropertyValueFactory property="creatDeNume" />
+              </cellValueFactory>
+           </TableColumn>
+
+           <TableColumn fx:id="data_creareCompanie" prefWidth="103.5999755859375" text="Data Creare">
+              <cellValueFactory>
+                 <PropertyValueFactory property="data_creare" />
+              </cellValueFactory>
+           </TableColumn>
+
+           <TableColumn fx:id="activCompanie" prefWidth="103.5999755859375" text="Activ">
+              <cellValueFactory>
+                 <PropertyValueFactory property="activ" />
+              </cellValueFactory>
+           </TableColumn>
+        </columns>
+      </TableView>
+      <TableView fx:id="leadDetailsTable" layoutX="153.0" layoutY="69.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <columns>
+            <TableColumn fx:id="numeLead" prefWidth="270.59996032714844" text="Nume Lead">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nume_lead" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadCompanie" prefWidth="147.5999755859375" text="Companie">
+               <cellValueFactory>
+                  <PropertyValueFactory property="numeCompanie" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadContact" minWidth="0.0" prefWidth="103.20001220703125" text="Contact">
+               <cellValueFactory>
+                  <PropertyValueFactory property="numeComplet" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadFunctie" minWidth="4.4000244140625" prefWidth="118.0" text="Functie">
+               <cellValueFactory>
+                  <PropertyValueFactory property="functie" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadTelefon" minWidth="0.0" prefWidth="114.800048828125" text="Telefon">
+               <cellValueFactory>
+                  <PropertyValueFactory property="telefon" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadEmail" minWidth="0.0" prefWidth="77.39990234375" text="Email">
+               <cellValueFactory>
+                  <PropertyValueFactory property="email" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadVenitEstimat" minWidth="8.0" prefWidth="108.20001220703125" text="Venit Estimat">
+               <cellValueFactory>
+                  <PropertyValueFactory property="venit_estimat" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadStatus" prefWidth="167.0" text="Status">
+               <cellValueFactory>
+                  <PropertyValueFactory property="status" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="responsabilLead" prefWidth="117.60009765625" text="Responsabil">
+               <cellValueFactory>
+                  <PropertyValueFactory property="responsabil" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="creat_deLead" prefWidth="84.0" text="Creat De">
+               <cellValueFactory>
+                  <PropertyValueFactory property="creat_de" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="data_creareLead" prefWidth="144.0" text="Data Creare">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_creare" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="activLead" prefWidth="64.0" text="Activ">
+               <cellValueFactory>
+                  <PropertyValueFactory property="activ" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <ImageView fx:id="refreshCompanies" fitHeight="24.0" fitWidth="24.0" layoutX="131.0" layoutY="48.0" onMouseClicked="#handleShowCompanies" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="refreshContacts" fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="58.0" onMouseClicked="#handleShowContacts" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="refreshLeads" fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="69.0" onMouseClicked="#handleShowLeads" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="opportunitiesDetailsTable" layoutX="173.0" layoutY="69.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <columns>
+            <TableColumn fx:id="numeOportunitate" prefWidth="257.1999969482422" text="Nume Oportunitate">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nume_oportunitate" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="companieOportunitate" prefWidth="127.19998168945312" text="Companie">
+               <cellValueFactory>
+                  <PropertyValueFactory property="companie_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="contactOportunitate" prefWidth="114.4000244140625" text="Contact">
+               <cellValueFactory>
+                  <PropertyValueFactory property="contact_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="venitEstimatOportunitate" prefWidth="118.0" text="Venit Estimat">
+               <cellValueFactory>
+                  <PropertyValueFactory property="venit_estimat" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="venitRealOportunitate" prefWidth="104.4000244140625" text="Venit Real">
+               <cellValueFactory>
+                  <PropertyValueFactory property="venit_real" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="statusOportunitate" prefWidth="105.20001220703125" text="Status">
+               <cellValueFactory>
+                  <PropertyValueFactory property="status" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="responsabilOportunitate" prefWidth="112.0" text="Responsabil">
+               <cellValueFactory>
+                  <PropertyValueFactory property="responsabil_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="creatDeOportunitate" prefWidth="139.4000244140625" text="Creat De">
+               <cellValueFactory>
+                  <PropertyValueFactory property="creat_de_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="dataCreareOportunitate" prefWidth="115.2000732421875" text="Data Creare">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_creare" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="activOportunitate" prefWidth="108.0" text="Activ">
+               <cellValueFactory>
+                  <PropertyValueFactory property="activ" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <ImageView fx:id="refreshOpportunities" fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="69.0" onMouseClicked="#handleShowOpportunities" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="salesDetailsTable" layoutX="173.0" layoutY="69.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <columns>
+            <TableColumn fx:id="companieVanzare" prefWidth="127.19998168945312" text="Companie">
+               <cellValueFactory>
+                  <PropertyValueFactory property="companie_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="contactVanzare" prefWidth="114.4000244140625" text="Contact">
+               <cellValueFactory>
+                  <PropertyValueFactory property="contact_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="produsNume" prefWidth="267.8000183105469" text="Produs">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nume_produs" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="pret" prefWidth="69.79998779296875" text="Pret">
+               <cellValueFactory>
+                  <PropertyValueFactory property="pret" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="cantitate" prefWidth="118.60003662109375" text="Cantitate">
+               <cellValueFactory>
+                  <PropertyValueFactory property="cantitate" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="total" prefWidth="124.79998779296875" text="Total">
+               <cellValueFactory>
+                  <PropertyValueFactory property="total" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="responsabilVanzare" prefWidth="127.2000732421875" text="Responsabil">
+               <cellValueFactory>
+                  <PropertyValueFactory property="responsabil_nume" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="creatDeVanzare" prefWidth="144.0" text="Creat De">
+               <cellValueFactory>
+                  <PropertyValueFactory property="creat_de_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="dataCreareVanzare" prefWidth="125.0" text="Data Creare">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_creare" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="activVanzare" prefWidth="89.60009765625" text="Activ">
+               <cellValueFactory>
+                  <PropertyValueFactory property="activ" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <ImageView fx:id="refreshSales" fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="69.0" onMouseClicked="#handleShowSales" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="productsDetailsTable" layoutX="195.0" layoutY="59.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <columns>
+            <TableColumn fx:id="numeProdus" prefWidth="346.99998474121094" text="Nume Produs/Servicii">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="descriereProdus" prefWidth="489.00006103515625" text="Descriere Produs/Servicii">
+               <cellValueFactory>
+                  <PropertyValueFactory property="descriere" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="responsabilProdus" prefWidth="158.99993896484375" text="Responsabil">
+               <cellValueFactory>
+                  <PropertyValueFactory property="responsabil_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="creatDeProdus" prefWidth="161.800048828125" text="Creat De">
+               <cellValueFactory>
+                  <PropertyValueFactory property="creat_de_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="dataCreareProdus" prefWidth="97.4000244140625" text="Data Creare">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_creare" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="activProdus" prefWidth="95.0" text="Activ">
+               <cellValueFactory>
+                  <PropertyValueFactory property="activ" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <ImageView fx:id="refreshProducts" fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="69.0" onMouseClicked="#handleShowProducts" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="tasksDetailsTable" layoutX="173.0" layoutY="69.0" prefHeight="608.0" prefWidth="567.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <columns>
+            <TableColumn fx:id="descriereTask" prefWidth="346.99998474121094" text="Descriere Task">
+               <cellValueFactory>
+                  <PropertyValueFactory property="descriere" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="leadTask" prefWidth="300" text="Lead">
+               <cellValueFactory>
+                  <PropertyValueFactory property="lead_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="oportunitateTask" prefWidth="300" text="Oportunitate">
+               <cellValueFactory>
+                  <PropertyValueFactory property="oportunitate_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="statusTask" prefWidth="92" text="Status">
+               <cellValueFactory>
+                  <PropertyValueFactory property="status" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="responsabilTask" prefWidth="92" text="Responsabil">
+               <cellValueFactory>
+                  <PropertyValueFactory property="responsabil_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="creatDeTask" prefWidth="92" text="Creat De">
+               <cellValueFactory>
+                  <PropertyValueFactory property="creat_de_nume" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="dataCreareTask" prefWidth="103.800048828125" text="Data Creare">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_creare" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="deadlineTask" prefWidth="150" text="Termen Limita">
+               <cellValueFactory>
+                  <PropertyValueFactory property="deadline" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="activTask" prefWidth="91.4000244140625" text="Activ">
+               <cellValueFactory>
+                  <PropertyValueFactory property="activ" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <ImageView fx:id="refreshTasks" fitHeight="24.0" fitWidth="24.0" layoutX="141.0" layoutY="69.0" onMouseClicked="#handleShowTasks" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="59.0">
+         <image>
+            <Image url="@../../../REFRESH-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <AnchorPane fx:id="dashboardAnchorPane" layoutX="163.0" layoutY="83.0" prefHeight="478.0" prefWidth="849.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="59.0">
+         <children>
+            <Label layoutX="59.0" layoutY="47.0" prefHeight="18.0" prefWidth="114.0" text="Task-urile mele:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="myTasksTableView" layoutX="59.0" layoutY="81.0" prefHeight="260.0" prefWidth="342.0">
+              <columns>
+                <TableColumn prefWidth="223.40000915527344" text="Descriere">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="descriere" />
+                   </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn prefWidth="118.20001220703125" text="Deadline">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="deadline" />
+                   </cellValueFactory>
+               </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="406.0" layoutY="47.0" prefHeight="18.0" prefWidth="114.0" text="Oportunitățile mele:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="myOpportunitiesTableView" layoutX="406.0" layoutY="81.0" prefHeight="260.0" prefWidth="342.0">
+               <columns>
+                  <TableColumn prefWidth="250.4000244140625" text="Oportunitate" />
+                  <TableColumn prefWidth="91.199951171875" text="Status" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+      <ImageView fx:id="homeImage" fitHeight="38.0" fitWidth="38.0" layoutX="3.0" layoutY="1.0" onMouseClicked="#handleShowHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../HOME-Icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <MenuBar fx:id="menuBarUser" layoutX="1232.0" layoutY="8.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="3.0">
+        <menus>
+          <Menu fx:id="menuUser" mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="menuItemLogOff" mnemonicParsing="false" onAction="#logOff" text="Deconectare" />
+                  <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#exit" text="Închidere" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="welcomeUser" layoutX="60.0" layoutY="11.0" prefHeight="18.0" prefWidth="807.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="9.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.DetailsProductPageController">
+   <children>
+      <Button layoutX="40.0" layoutY="349.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="Inapoi" />
+      <Button layoutX="415.0" layoutY="349.0" mnemonicParsing="false" onAction="#updateProduct" text="Actualizeaza" />
+      <Button layoutX="518.0" layoutY="349.0" mnemonicParsing="false" text="Arhiveaza" />
+      <Button layoutX="333.0" layoutY="349.0" mnemonicParsing="false" text="Creaza" />
+      <Label fx:id="statusUpdate" layoutX="353.0" layoutY="377.0" prefHeight="18.0" prefWidth="198.0" />
+      <ComboBox fx:id="productAssigneeComboBox" layoutX="466.0" layoutY="187.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="389.0" layoutY="191.0" prefHeight="18.0" prefWidth="98.0" text="Responsabil:" />
+      <CheckBox fx:id="productActiveCheckBox" layoutX="466.0" layoutY="40.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="16.0" />
+      <Label layoutX="390.0" layoutY="40.0" prefHeight="18.0" prefWidth="50.0" text="Activ:" />
+      <Label layoutX="385.0" layoutY="94.0" prefHeight="18.0" prefWidth="76.0" text="Data Creare:" />
+      <DatePicker fx:id="productCreatedDate" layoutX="466.0" layoutY="90.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="391.0" layoutY="140.0" text="Creat de:" />
+      <ComboBox fx:id="productCreatedByComboBox" layoutX="466.0" layoutY="136.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="33.0" layoutY="94.0" prefHeight="18.0" prefWidth="141.0" text="Descriere Produs/Servicii:" />
+      <Label layoutX="33.0" layoutY="40.0" prefHeight="18.0" prefWidth="123.0" text="Nume Produs/Servicii:" />
+      <TextField fx:id="productNameField" layoutX="172.0" layoutY="36.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextArea fx:id="productDescriptionField" layoutX="172.0" layoutY="87.0" prefHeight="200.0" prefWidth="186.0" wrapText="true"/>
+   </children>
+</AnchorPane>

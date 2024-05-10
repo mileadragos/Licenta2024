@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crmjavafx.DetailsTaskPageController">
+   <children>
+      <Button fx:id="backButton" layoutX="40.0" layoutY="349.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="55.0" text="Inapoi" />
+      <Button layoutX="415.0" layoutY="349.0" mnemonicParsing="false" onAction="#updateTask" text="Actualizeaza" />
+      <Button fx:id="archiveButton" layoutX="518.0" layoutY="349.0" mnemonicParsing="false" onAction="#archiveTask" text="Arhiveaza" />
+      <Button fx:id="createButton" layoutX="333.0" layoutY="349.0" mnemonicParsing="false" onAction="#createTask" text="Creaza" />
+      <Label layoutX="43.0" layoutY="13.0" prefHeight="18.0" prefWidth="123.0" text="Oportunitate:" />
+      <ComboBox fx:id="taskOpportunityComboBox" layoutX="183.0" layoutY="9.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="43.0" layoutY="49.0" prefHeight="18.0" prefWidth="123.0" text="Lead:" />
+      <ComboBox fx:id="taskLeadComboBox" layoutX="183.0" layoutY="45.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="46.0" layoutY="126.0" prefHeight="18.0" prefWidth="98.0" text="Descriere:" />
+      <Label fx:id="statusUpdate" layoutX="353.0" layoutY="377.0" prefHeight="18.0" prefWidth="198.0" />
+      <ComboBox fx:id="taskAssigneeComboBox" layoutX="466.0" layoutY="155.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="390.0" layoutY="159.0" prefHeight="18.0" prefWidth="68.0" text="Responsabil:" />
+      <CheckBox fx:id="taskActiveCheckBox" disable="true" layoutX="466.0" layoutY="13.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="16.0" />
+      <Label layoutX="390.0" layoutY="13.0" prefHeight="18.0" prefWidth="50.0" text="Activ:" />
+      <Label layoutX="390.0" layoutY="49.0" prefHeight="18.0" prefWidth="76.0" text="Data Creare:" />
+      <DatePicker fx:id="taskCreatedDate" disable="true" layoutX="466.0" layoutY="45.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="391.0" layoutY="127.0" text="Creat de:" />
+      <ComboBox fx:id="taskCreatedByComboBox" disable="true" layoutX="466.0" layoutY="123.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="40.0" layoutY="87.0" prefHeight="18.0" prefWidth="98.0" text="Status:" />
+      <DatePicker fx:id="taskDueDate" layoutX="466.0" layoutY="83.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="386.0" layoutY="87.0" prefHeight="18.0" prefWidth="82.0" text="Termen Limita:" />
+      <ComboBox fx:id="taskStatusComboBox" layoutX="183.0" layoutY="83.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextArea fx:id="taskDescriptionField" layoutX="183.0" layoutY="127.0" prefHeight="200.0" prefWidth="186.0" wrapText="true" />
+   </children>
+</AnchorPane>
